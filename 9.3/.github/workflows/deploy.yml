@@ -2,7 +2,7 @@ name: Git&Slack
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
     tags: [ 'v*.*.*' ]
 
 env:
