@@ -40,7 +40,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v5 # аналог docker build для облака GitHub
         with:
-          context: . # папка, где искать файлы для сборки
+          context: ./9.3 # папка, где искать файлы для сборки
           push: true # отправить образ на GitHub Container Registry сразу после создания
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
