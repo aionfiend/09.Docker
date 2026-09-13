@@ -1,3 +1,4 @@
+https://github.com/aionfiend/09.Docker/tree/9.3
 #9.1
 1. brew install docker
 ```
@@ -118,3 +119,13 @@ Successfully tagged my-node-web-app:latest
 8. Проверка в браузере http://localhost:8080/
 
 9.3
+1. Отключение и удаление контейнера прошлого проекта
+2. Создание всех требудемых файлов
+3. Установка  brew install docker-buildx, mkdir -p ~/.docker/cli-plugins, ln -sfn $(which docker-buildx) ~/.docker/cli-plugins/docker-buildx
+4. Сборка проекта локально docker run -d -p 8080:8080 --name my-running-app multistage-go-app:v1.0.0
+5. Создание нового аккаунта Slack и Webhuk. СОздание секрета для GitHub.
+6. Отправка и сборка контейнера в Git Action
+
+# Для уменьшения весь использовался нулевой образ - scratch.
+# go build -ldflags="-w -s" - исользуем флаги для очищения бинорного файла от символов отладки, что уменьшает его весь.
+# COPY --from=builder - забирае уже созданный файл из первого этапа (builder).  
