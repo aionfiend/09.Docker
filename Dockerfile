@@ -13,7 +13,7 @@ COPY go.mod ./
 RUN go mod download
 
 #  Копирование исходного кода
-COPY ../9.3 .
+COPY . .
 
 # Статическая компиляция бинарного файла для Linux (без внешних зависимостей CGO)
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /app/webserver .
